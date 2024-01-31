@@ -192,5 +192,18 @@ Modularity: Utilizes functions for repeated calculations, enhancing code readabi
 Usage:
 This program is ideal for students, educators, and professionals in mechanical engineering or robotics who require a detailed kinematic analysis of crank-rocker mechanisms. The clear structure and detailed comments make it easy to understand and modify for specific applications or educational purposes.
 
+fullkinematicanalysis_extra.m
 
+Description:
+
+This MATLAB script performs a detailed kinematic analysis of a complex mechanism. It utilizes the Newton-Raphson iterative method to solve for the angular positions, velocities, and accelerations of various components of the mechanism as functions of the input angle, theta1. Designed to be both educational and functional, the script is ideal for students and experts in mechanical engineering, robotics, and related fields.
+
+Key features:
+
+Physical Parameter Initialization: Defines the lengths of various arms and specific coordinates in the mechanism.
+Iterative Solver Setup: Implements the Newton-Raphson method for solving nonlinear equations, with initial guesses, error tolerance, and maximum iteration count.
+Kinematic Equations and Jacobian Matrix: Formulates the kinematic relationships and constructs the Jacobian matrix essential for the iterative process.
+Velocity and Acceleration Analysis: Extends the kinematic analysis to include velocities and accelerations of the mechanism components.
+Result Visualization: Plots the results, showing the relationships between input angle theta1 and the angular positions, velocities, and accelerations of the mechanism's components.
+The script is thoroughly commented for clarity, making it accessible to students learning about kinematic analysis and valuable to experts for more complex applications or as a teaching tool.
 
