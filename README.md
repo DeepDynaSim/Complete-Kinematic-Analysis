@@ -1,39 +1,34 @@
-# Complete-Kinematic-Analysis
-This repository offers an exhaustive resource for the kinematic analysis of mechanical systems. It encompasses a comprehensive suite of tools and documentation for analyzing the position, velocity, and acceleration of various mechanisms.
+# Mechanism Kinematics in MATLAB
 
-Content Breakdown:
+**DeepDynaSim collection | Mechanical systems and robotics | Analysis and animation**
 
-Theoretical Basis:
+Explore position, velocity and acceleration analysis for planar mechanisms. The repository brings together Newton-Raphson solvers, four-bar and slider-crank examples, animations and technical guides for engineering education and model development.
 
-Detailed exposition of the fundamental principles of kinematics.
-Coverage of various types of mechanisms and their motion characteristics.
-Mathematical formulations for position, velocity, and acceleration analysis.
-Symbolic Computation:
+## Start here
 
-Scripts and modules for symbolic computation of kinematic parameters.
-Utilization of advanced mathematical software (e.g., MATLAB, Mathematica) for symbolic analysis.
-Examples demonstrating the symbolic computation processes.
+| Goal | Resource |
+| --- | --- |
+| Study the derivations | [Complete Kinematic Analysis](Complete%20Kinematic%20Analysis.pdf), [Additional guide](Full%20Kinematic%20Analysis_Extra.pdf) |
+| Inspect iterative solvers | [NewtonRaphson_optimized.m](NewtonRaphson_optimized.m), [alternative](NewtonRaphson_alternative.m) |
+| Analyse a four-bar mechanism | [position](fourbarmechanism_positionanalysis.m), [full kinematics](fourbarmechanism_kinematicanalysis.m) |
+| Explore crank mechanisms | [slider-crank](crankconnectingrod_completekinematic.m), [crank-rocker](crankrocker_completekinematic.m) |
+| Review an animation | [crank-connectingrod_animation.avi](crank-connectingrod_animation.avi) |
 
-Step-by-Step Code Derivation & Implementation:
-Comprehensive code walkthroughs for deriving kinematic equations.
-Implementation guidelines for MATLAB.
-Best practices for code optimization and debugging in kinematic analysis.
+## Getting started
 
-Analysis & Animation:
+Open the cloned repository root in MATLAB and inspect an example before running it. Symbolic derivations require Symbolic Math Toolbox. Check dimensions, angle conventions, starting guesses and convergence tolerances for the selected mechanism.
 
-Tools and methods for analyzing the computed kinematic data.
-Integration of graphical libraries for the animation of mechanisms.
-Tutorials for creating visual representations of kinematic behaviors.
+```matlab
+addpath(pwd);
+edit fourbarmechanism_positionanalysis.m
+```
 
-Additional Features:
-Case Studies: Practical examples covering a range of mechanisms.
-Community Contributions: A section for users to contribute their examples and improvements.
-Documentation: Comprehensive documentation for each module and function.
-Testing and Validation: Scripts for testing and validating the kinematic models against known benchmarks.
-Target Audience:
-This repository is intended for students, researchers, and professionals in mechanical engineering, robotics, and related fields, seeking a deep understanding of kinematics and practical tools for analysis.
+The detailed walkthroughs below retain the mathematical explanations. The optimized solver filename in this checkout is `NewtonRaphson_optimized.m`.
 
-Newton_Raphson_optimized.m:
+## Detailed notes
+
+### `NewtonRaphson_optimized.m`
+
 The provided code is a MATLAB script for implementing the Newton-Raphson method to solve a system of nonlinear equations. Here's a breakdown of the code's functionality:
 
 Purpose of the Script:
@@ -69,7 +64,7 @@ Within a loop, it calculates the Jacobian matrix and updates the solution vector
 The loop continues until the error norm is less than the tolerance or the maximum number of iterations is reached.
 This script demonstrates a practical application of the Newton-Raphson method in numerical analysis, particularly useful for engineers and scientists dealing with nonlinear systems. The code is well-structured, with clear separation of the main script and the function definition, making it both efficient and easy to understand.
 
-fourbarmechanism_kinematicanalysis.m
+### `fourbarmechanism_kinematicanalysis.m`
 
 The MATLAB script you've provided is designed for the kinematic analysis of a four-bar linkage mechanism. It focuses on calculating and plotting the positions, velocities, and accelerations of the mechanism's components. Here's an in-depth description:
 
@@ -105,7 +100,7 @@ The script generates plots for the angles, velocities, and accelerations of arms
 It uses subplots to display these results in a structured manner.
 Overall, this script demonstrates a comprehensive approach to kinematic analysis of a four-bar mechanism using numerical methods. It includes detailed calculations for position, velocity, and acceleration, along with error handling and result visualization. The use of preallocation for arrays and checks for numerical stability showcase good programming practices in MATLAB.
 
-crankconnectingrod_completekinematic.m
+### `crankconnectingrod_completekinematic.m`
 
 This MATLAB script performs a detailed kinematic analysis of a crank and connecting rod mechanism, including numerical solutions for positions, velocities, and accelerations, and also includes an animation of the mechanism's movement. Here's an explanation of its key components:
 
@@ -148,7 +143,7 @@ Plotting Kinematic Properties:
 The commented-out section at the end of the script suggests an intent to plot various kinematic properties against θ2, though this part is not active in the current script.
 This script is a comprehensive tool for analyzing and visualizing the kinematics of a crank and connecting rod mechanism. It combines numerical methods for solving nonlinear equations with graphical visualization, providing a detailed insight into the mechanism's behavior over time. The use of Newton-Raphson for position analysis, along with efficient matrix operations for velocity and acceleration calculations, demonstrates a sophisticated approach to mechanical simulation in MATLAB. The animation part is particularly useful for visualizing the mechanism's motion and understanding its dynamics.
 
-crankrocker_completekinematic.m
+### `crankrocker_completekinematic.m`
 
 This MATLAB program provides a comprehensive kinematic analysis of a crank-rocker mechanism. It uses the Freudenstein equations to analyze position, velocity, and acceleration. The code is well-structured and includes both calculations and visualizations. Here's a detailed description:
 
@@ -192,7 +187,7 @@ Modularity: Utilizes functions for repeated calculations, enhancing code readabi
 Usage:
 This program is ideal for students, educators, and professionals in mechanical engineering or robotics who require a detailed kinematic analysis of crank-rocker mechanisms. The clear structure and detailed comments make it easy to understand and modify for specific applications or educational purposes.
 
-fullkinematicanalysis_extra.m
+### `fullkinematicanalysis_extra.m`
 
 Description:
 
@@ -207,3 +202,12 @@ Velocity and Acceleration Analysis: Extends the kinematic analysis to include ve
 Result Visualization: Plots the results, showing the relationships between input angle theta1 and the angular positions, velocities, and accelerations of the mechanism's components.
 The script is thoroughly commented for clarity, making it accessible to students learning about kinematic analysis and valuable to experts for more complex applications or as a teaching tool.
 
+
+
+## Related work and collaboration
+
+Explore related repositories: [Flexible Link Manipulators Modelling and Control](https://github.com/DeepDynaSim/Flexible-Link-Manipulators-Modelling-and-Control) · [Servo Motors and Motion Control Systems](https://github.com/DeepDynaSim/Servo-Motors-and-Motion-Control-Systems).
+
+[DeepDynaSim](https://github.com/DeepDynaSim) is an engineering R&D and consulting company in İzmir, Türkiye, focused on physics-guided AI, simulation and control. For engineering collaboration: [support@deepdynasim.com](mailto:support@deepdynasim.com). For repository questions, use [Issues](https://github.com/DeepDynaSim/Complete-Kinematic-Analysis/issues).
+
+Reuse follows the existing [LICENSE](LICENSE); academic authorship and third-party attribution remain with their respective creators.
