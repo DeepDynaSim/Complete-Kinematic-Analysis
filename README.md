@@ -23,6 +23,15 @@ addpath(pwd);
 edit fourbarmechanism_positionanalysis.m
 ```
 
+For a console-only nonlinear-system example, run:
+
+```matlab
+NewtonRaphson_optimized
+residual_norm = norm(fn(v_final));
+```
+
+Here `final_error` is the norm of the nonlinear residual, and the printed iteration count is bounded by `max_iterations`. Reaching the iteration limit alone is not a convergence certificate. The solver example uses numerical function handles; the separate symbolic examples need Symbolic Math Toolbox.
+
 The detailed walkthroughs below retain the mathematical explanations. The optimized solver filename in this checkout is `NewtonRaphson_optimized.m`.
 
 ## Detailed notes
